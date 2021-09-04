@@ -1,0 +1,768 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.bold-text {
+    font-weight: 600;
+    color: #000;
+}
+
+.bold-text-white {
+    font-weight: 600;
+    color: #fff;
+}
+
+#max-width {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+p {
+    color: #555;
+}
+
+.contact-btn {
+    display: inline-block;
+    background: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 1.2rem;
+    transition: .2s;
+    border: 2px solid #fff;
+}
+
+.contact-btn:hover {
+    background: black;
+    color: white;
+    border: 2px solid #fff;
+}
+
+.youtube-btn {
+    display: inline-block;
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 5px 0;
+    font-size: 1.2rem;
+    transition: .2s;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.youtube-btn:hover {
+    background: white;
+    color: black;
+    border: 2px solid black;
+}
+
+.streaming-btn {
+    display: inline-block;
+    background: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin: 15px 0;
+    font-size: 1.2rem;
+    transition: .2s;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.streaming-btn:hover {
+    background: white;
+    color: black;
+    border: 2px solid black;
+}
+
+a {
+    cursor: pointer !important;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.logo img {
+    height: 80px;
+    padding: 10px 0;
+    width: auto;
+}
+
+.menu-list {
+    display: inline-flex;
+    list-style: none;
+}
+
+.menu-list li {
+    padding: 0 10px;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+    transition: .2s;
+    font-size: 1.1rem;
+    position: relative;
+}
+
+.menu-list li a:hover {
+    color: #000;
+}
+
+
+.menu-list li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #000;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.menu-list li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.menu-item-desktop {
+    display: block;
+}
+
+
+
+
+/* MOBILE MENU */
+
+.ham {
+    /* always keep ham on top of everything */
+    z-index: 1000;
+    width: 36px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    background-image: url("https://ljc-dev.github.io/testing0/ham.svg");
+    background-size: 100%;
+    display: none;
+}
+
+/* change ham image to close */
+.showClose {
+    background-image: url("https://ljc-dev.github.io/testing0/ham-close.svg");
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+    /* hide the menu above the screen by default */
+    transform: translateY(-100%);
+    /* transition adds a little animation when sliding in and out the menu */
+    transition: transform 0.5s ease;
+    z-index: 10;
+}
+
+
+.showNav {
+    /* show the menu */
+    transform: translateY(0);
+}
+
+/* basic nav styling below */
+
+.navbar ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar ul li a {
+    color: white;
+    padding-bottom: 5px;
+    border-bottom: 2px solid black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    border-bottom: 2px solid white;
+}
+
+/* KONIEC MOBILE MENU */
+
+.heading {
+    width: 100%;
+    height: 89vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)), url(./img/cover-photo.jpg);
+    /* background-image: url(./img/cover-photo.jpg); */
+    background-position: center;
+    background-attachment: fixed;
+    filter: grayscale(1);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading p {
+    color: white;
+}
+
+.heading-copy {
+    transform: translateX(-300px);
+    color: white;
+
+}
+
+.about-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 100px;
+    flex-wrap: wrap;
+}
+
+.about-photo {
+    background-image: url(./img/about-img.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1);
+    min-height: 300px;
+}
+
+.about-copy {
+    align-self: center;
+}
+
+.about-photo,
+.about-copy {
+    width: 40%;
+}
+
+.youtube {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 100px;
+}
+
+.youtube-photo {
+    background-image: url(https://images.unsplash.com/photo-1542039375-28138150cc31?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80);
+    filter: grayscale(1);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.youtube-photo,
+.youtube-copy {
+    width: 40%;
+}
+
+
+.swiper {
+    margin-top: 100px;
+    width: 100%;
+    height: auto;
+}
+
+.swiper-desktop {
+    display: block;
+}
+
+.swiper-mobile {
+    display: none;
+}
+
+.swiper-pagination-bullet-active {
+    background: black !important;
+}
+
+.youtuber-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.youtuber-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.youtuber-name {
+    margin: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.youtuber-photo {
+    width: 150px;
+    height: 150px;
+}
+
+.avatar {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: grayscale(1);
+    transition: .3s;
+}
+
+.youtuber-card:hover .avatar {
+    filter: grayscale(0);
+}
+
+.partners-btn-container {
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
+    width: 100%;
+}
+
+.productions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    margin-top: 100px;
+}
+
+.productions-photo {
+    background-image: url(./img/productions-photo.png);
+    filter: grayscale(1);
+    background-size: cover;
+    background-position: center;
+}
+
+.productions-photo,
+.productions-copy {
+    width: 40%;
+}
+
+.streaming,
+.campaign,
+.partners,
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.streaming-copy {
+    text-align: center;
+    width: 80%;
+}
+
+.campaign-copy {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.streaming-copy h2,
+.campaign-copy h2 {
+    margin-bottom: 15px;
+}
+
+.streaming-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.streaming-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 20px;
+    width: 25%;
+    height: 100%;
+    border: 1px solid #000;
+}
+
+
+.streaming-card-photo {
+    padding: 50px 30px;
+    background: #000;
+}
+
+.streaming-card-photo img {
+    height: 100px;
+    width: auto;
+}
+
+.streaming-card-content {
+    margin-top: 20px;
+}
+
+.campaign {
+    background: #222;
+    padding: 50px 0;
+    color: #fff;
+}
+
+.campaign-cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.campaign-card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 20px;
+    width: 25%;
+    height: 100%;
+    ;
+}
+
+.campaign-copy p,
+.campaign-card p {
+    color: rgb(221, 221, 221);
+}
+
+.campaign-photo {
+    width: 100%;
+    height: 300px;
+    background: black;
+}
+
+.camp--photo--1,
+.camp--photo--2,
+.camp--photo--3 {
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1);
+}
+
+.camp--photo--1 {
+    background-image: url(./img/holownia-kampania.jpg);
+}
+
+.camp--photo--2 {
+    background-image: url(./img/kidawa-kampania.jpg);
+}
+
+.camp--photo--3 {
+    background-image: url(./img/warszawa-kampania.jpg);
+}
+
+.campaign-title {
+    margin-top: 20px;
+}
+
+.subtitles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.subtitles-photo,
+.subtitles-copy {
+    width: 40%;
+}
+
+.subtitles-photo {
+    background-image: url(./img/napisy-img.jpg);
+    filter: grayscale(1);
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+
+.partners-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partners-wrapper h2 {
+    padding: 10px;
+}
+
+.partners-wrapper img {
+    width: 300px;
+    height: auto;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+
+.partners-logos {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+
+.partner-logo {
+    text-align: center;
+    margin: 20px;
+}
+
+.partner-logo img {
+    width: 200px;
+    height: auto;
+    filter: grayscale(1);
+    transition: .2s;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.partner-logo img:hover {
+    filter: grayscale(0);
+}
+
+.contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #000;
+    color: white;
+    min-width: 20%;
+    width: 350px;
+    height: 300px;
+    padding: 10px 30px;
+    margin: 20px;
+}
+
+.contact-card .contact-btn {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 20px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.card-copy a {
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+    display: block;
+}
+
+
+.card-copy a:hover {
+    color: #999;
+}
+
+
+
+.footer {
+    width: 100%;
+    background: #000;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.footer-logo {
+    display: flex;
+}
+
+.company-logo img {
+    width: 200px;
+    height: auto;
+}
+
+.company-logo,
+.company-info {
+    margin: 0 15px;
+}
+
+.company-info p {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px 20px 15px;
+}
+
+.footer-icons p {
+    color: #fff;
+}
+
+a.sm-btn {
+    margin: 0 5px;
+    color: rgb(141, 141, 141);
+    transition: .2s;
+    font-size: 3rem;
+}
+
+a.sm-btn:hover {
+    color: #fff;
+}
+
+
+@media (max-width: 1100px) {
+    .heading-copy {
+        transform: translateX(0);
+        text-align: center;
+    }
+
+    .streaming-card {
+        width: 80%;
+        margin: 10px 20px
+    }
+
+    .campaign-card {
+        width: 80%;
+        margin: 10px 20px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .menu-item-desktop {
+        display: none;
+    }
+
+    .ham {
+        display: block
+    }
+
+    .youtube,
+    .productions {
+        align-items: center;
+    }
+
+    .youtube-photo,
+    .productions-photo {
+        height: 300px;
+    }
+
+    .youtube,
+    .subtitles {
+        flex-direction: column-reverse;
+    }
+
+    .about-photo,
+    .about-copy,
+    .youtube-copy,
+    .youtube-photo,
+    .productions-copy,
+    .productions-photo,
+    .subtitles-copy,
+    .subtitles-photo {
+        width: 90%;
+    }
+
+    .about-copy,
+    .youtube-copy,
+    .productions-copy,
+    .subtitles-copy {
+        margin-top: 20px;
+    }
+
+    .swiper-desktop {
+        display: none;
+    }
+
+    .swiper-mobile {
+        display: block;
+    }
+
+    .partner-logo {
+        margin: 20px;
+        display: block;
+    }
+
+
+    .partners-wrapper {
+        flex-direction: column;
+    }
+}
+
+;
